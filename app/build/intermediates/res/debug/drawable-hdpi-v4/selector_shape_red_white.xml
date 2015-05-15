@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:drawable="@drawable/circular_bounds_red" android:state_pressed="false"/>
+    <item android:drawable="@drawable/circular_bounds_white"/>
+</selector><!-- From: file:/C:/Users/wassim/androidstudio/openbci_new/app/src/main/res/drawable-hdpi/selector_shape_red_white.xml -->

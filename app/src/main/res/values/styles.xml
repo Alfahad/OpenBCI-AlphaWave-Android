@@ -1,0 +1,18 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="button">
+        <item name="android:textColor">@drawable/white_blue</item>
+        <item name="android:background">@drawable/selector_shape_blue_white</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:typeface">normal</item>
+       <item name="android:textStyle">bold</item>
+    <item name="android:gravity">center</item>
+    <item name="android:padding">5dp</item>
+        <item name="android:layout_margin">3dp</item>
+    </style>
+</resources>

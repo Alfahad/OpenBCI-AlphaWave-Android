@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+android:shape="rectangle">
+    <corners android:radius="@dimen/corners" />
+
+    <solid android:color="@color/blue" />
+</shape>
+
+
+<!-- From: file:/C:/Users/wassim/androidstudio/openbci_new/app/src/main/res/drawable-hdpi/circular_bounds_blue.xml -->

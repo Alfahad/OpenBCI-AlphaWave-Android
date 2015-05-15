@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.3"
+        android:background="@drawable/eegcap2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/txtnext"
+        android:layout_marginBottom="15dp"
+        android:orientation="vertical"
+        android:padding="5dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:padding="5dp"
+            android:text="It soundes the electrodes are not connected well!!"
+            android:textColor="#fff"
+            android:textSize="18dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="top"
+            android:padding="5dp"
+            android:text="Please make sure to place the electrodes correctly and then click continue to start again.. "
+            android:textColor="#fff"
+            android:textSize="18dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtnext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="5dp"
+        android:background="@drawable/buttonbluefilled"
+        android:gravity="center"
+        android:text="Continue"
+        android:textColor="#fff"
+        android:textSize="18sp" >
+    </TextView>
+
+</RelativeLayout><!-- From: file:/C:/Users/wassim/androidstudio/openbci_new/app/src/main/res/layout/fragment_connection_error.xml -->

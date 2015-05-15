@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ccc"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#ccc"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="@string/drawsiness"
+            android:background="#ccc"
+            android:textColor="#030303"
+            android:textSize="19dp" />
+
+        <TextView
+            android:id="@+id/txtleverdra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:background="#ccc"
+            android:typeface="serif"
+            android:textSize="25dp" />
+    </LinearLayout>
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/chart1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_above="@+id/footer"
+        android:background="#ccc" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/footer"
+        android:background="#ccc"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ccc"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtresume"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                style="@style/button"
+                android:text="Pause"
+                />
+
+            <TextView
+                android:id="@+id/txtfinish"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/button"
+                android:layout_weight="1"
+                android:background="@drawable/selector_shape_red_white"
+                android:text="Finish"
+ />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtconnection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/button"
+            android:text="connection"
+          />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
