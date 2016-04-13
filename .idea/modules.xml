@@ -3,8 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/openbci_new.iml" filepath="$PROJECT_DIR$/openbci_new.iml" />
+      <module fileurl="file://$PROJECT_DIR$/drowsiness.iml" filepath="$PROJECT_DIR$/drowsiness.iml" />
     </modules>
   </component>
 </project>
-

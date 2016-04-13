@@ -128,9 +128,9 @@ public class ConnectionFragment extends BaseFragment implements LeScanCallback, 
             } else if (RFduinoService.ACTION_DATA_AVAILABLE.equals(action)) {
                 byte[] data = intent
                         .getByteArrayExtra(RFduinoService.EXTRA_DATA);
-                if (data[0] == (byte)111) {
+                if (data[0] == (byte) 111) {
                     replace(new TutorialConnectFragment(), false);
-                } else if(running){
+                } else if (running) {
                     Helper.addEntry(getActivity(), entries, valueLabel, mChart, data[0], values, true);
                 }
             }
@@ -170,28 +170,30 @@ public class ConnectionFragment extends BaseFragment implements LeScanCallback, 
         mEnableBluetoothButton = (TextView) findViewById(R.id.enableBluetooth);
         Helper.prepareChat(mChart, getActivity());
         Helper.addEntry(getActivity(), entries, valueLabel, mChart, 105, values, false);
-mEnableBluetoothButton.setEnabled(true);
+        mEnableBluetoothButton.setEnabled(true);
         mEnableBluetoothButton.setOnClickListener(this);
 
-         mScanStatusText = (TextView) findViewById(R.id.scanStatus);
+        mScanStatusText = (TextView) findViewById(R.id.scanStatus);
 
-if(running)
-        Helper.addEntry(getActivity(), entries, valueLabel, mChart, -5, values, false);
+        if (running)
+            Helper.addEntry(getActivity(), entries, valueLabel, mChart, -5, values, false);
 
 
         start();
     }
-    private  void findButtons(ViewGroup viewGroup) {
+
+    private void findButtons(ViewGroup viewGroup) {
         for (int i = 0, N = viewGroup.getChildCount(); i < N; i++) {
             View child = viewGroup.getChildAt(i);
             if (child instanceof ViewGroup) {
                 findButtons((ViewGroup) child);
             } else {
-child.setOnClickListener(ConnectionFragment.this);
+                child.setOnClickListener(ConnectionFragment.this);
                 child.setEnabled(true);
             }
         }
     }
+
     @Override
     public int getContentView(Bundle state) {
         return R.layout.main_graph_connection;
@@ -202,8 +204,10 @@ child.setOnClickListener(ConnectionFragment.this);
     public void onStop() {
         super.onStop();
 
-        mBluetoothAdapter.stopLeScan(this);
-        stop();
+//        if (mBluetoothDevice != null) {
+            mBluetoothAdapter.stopLeScan(this);
+            stop();
+//        }
     }
 
     private void stop() {
@@ -272,7 +276,7 @@ child.setOnClickListener(ConnectionFragment.this);
         mCommandText.setEnabled(connected);
         findViewById(R.id.sendButton).setEnabled(connected);
         findViewById(R.id.startButton).setEnabled(connected);
-       findViewById(R.id.stopButton).setEnabled(connected);
+        findViewById(R.id.stopButton).setEnabled(connected);
     }
 
     @Override
@@ -304,127 +308,132 @@ child.setOnClickListener(ConnectionFragment.this);
         mScanButton = (TextView) findViewById(R.id.scan);
         mConnectButton = (TextView) findViewById(R.id.connect);
 
-findButtons((ViewGroup) getView());
+        findButtons((ViewGroup) getView());
 
         getActivity().registerReceiver(scanModeReceiver, new IntentFilter(
                 BluetoothAdapter.ACTION_SCAN_MODE_CHANGED));
         getActivity().registerReceiver(bluetoothStateReceiver, new IntentFilter(
                 BluetoothAdapter.ACTION_STATE_CHANGED));
         getActivity().registerReceiver(rfduinoReceiver, RFduinoService.getIntentFilter());
-        updateState(mBluetoothAdapter.isEnabled() ? STATE_DISCONNECTED
-                : STATE_BLUETOOTH_OFF);
+//        if (mBluetoothDevice != null) {
+            updateState(mBluetoothAdapter.isEnabled() ? STATE_DISCONNECTED
+
+                    : STATE_BLUETOOTH_OFF);
+//        }
         finish.setOnClickListener(this);
         resume.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.enableBluetooth:
+//        if (mBluetoothDevice != null) {
+            switch (v.getId()) {
+                case R.id.enableBluetooth:
 
-                if (mBluetoothState == STATE_BLUETOOTH_OFF) {
-                    Builder confirmOnBluetooth = new Builder(
-                            getActivity());
-                    confirmOnBluetooth.setTitle("Turn on Bluetooth?");
-                    confirmOnBluetooth.setPositiveButton("Yes",
-                            new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialog,
-                                                    int which) {
-                                    mEnableBluetoothButton.setText(mBluetoothAdapter
-                                            .enable() ? "Enabling Bluetooth"
-                                            : "Enable Failed!");
-                                }
-                            });
-                    confirmOnBluetooth.setNegativeButton("No",
-                            new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog,
-                                                    int which) {
-                                    dialog.cancel();
-                                }
-                            });
-                    confirmOnBluetooth.show();
-                } else {
+                    if (mBluetoothState == STATE_BLUETOOTH_OFF) {
+                        Builder confirmOnBluetooth = new Builder(
+                                getActivity());
+                        confirmOnBluetooth.setTitle("Turn on Bluetooth?");
+                        confirmOnBluetooth.setPositiveButton("Yes",
+                                new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog,
+                                                        int which) {
+                                        mEnableBluetoothButton.setText(mBluetoothAdapter
+                                                .enable() ? "Enabling Bluetooth"
+                                                : "Enable Failed!");
+                                    }
+                                });
+                        confirmOnBluetooth.setNegativeButton("No",
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog,
+                                                        int which) {
+                                        dialog.cancel();
+                                    }
+                                });
+                        confirmOnBluetooth.show();
+                    } else {
 
-                    Builder confirmOffBluetooth = new Builder(
-                            getActivity());
-                    String title = mBluetoothState > 2 ? "Bluetooth is being accessed by a device. Sure you want to turn it off?"
-                            : "Turn Off Bluetooth?";
-                    confirmOffBluetooth.setTitle(title);
-                    confirmOffBluetooth.setPositiveButton("Yes",
-                            new DialogInterface.OnClickListener() {
+                        Builder confirmOffBluetooth = new Builder(
+                                getActivity());
+                        String title = mBluetoothState > 2 ? "Bluetooth is being accessed by a device. Sure you want to turn it off?"
+                                : "Turn Off Bluetooth?";
+                        confirmOffBluetooth.setTitle(title);
+                        confirmOffBluetooth.setPositiveButton("Yes",
+                                new DialogInterface.OnClickListener() {
 
-                                @Override
-                                public void onClick(DialogInterface dialog,
-                                                    int which) {
-                                    mEnableBluetoothButton.setText(mBluetoothAdapter
-                                            .disable() ? "Disabling Bluetooth"
-                                            : "Disable Failed!");
-                                }
-                            });
-                    confirmOffBluetooth.setNegativeButton("No",
-                            new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog,
-                                                    int which) {
-                                    dialog.cancel();
-                                }
-                            });
-                    confirmOffBluetooth.show();
-                }
+                                    @Override
+                                    public void onClick(DialogInterface dialog,
+                                                        int which) {
+                                        mEnableBluetoothButton.setText(mBluetoothAdapter
+                                                .disable() ? "Disabling Bluetooth"
+                                                : "Disable Failed!");
+                                    }
+                                });
+                        confirmOffBluetooth.setNegativeButton("No",
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog,
+                                                        int which) {
+                                        dialog.cancel();
+                                    }
+                                });
+                        confirmOffBluetooth.show();
+                    }
 
 
-                break;
-            case R.id.scan:
-                mBluetoothAdapter.startLeScan(
-                        new UUID[]{RFduinoService.UUID_SERVICE},
-                        ConnectionFragment.this);
-                break;
-            case R.id.stopButton:
-                mReceiving.setVisibility(View.INVISIBLE);
-                mProgressBar.setVisibility(View.INVISIBLE);
-                mRFduinoService.send(STOP);
-                mViewFileButton.setEnabled(true);
-            case R.id.connectionStatus:
-                break;
-            case R.id.txtconnection:
-                switcher.setDisplayedChild(0);
-                break;
-            case R.id.graph:
-                switcher.setDisplayedChild(1);
-                break;
-            case R.id.startButton:
-                mRFduinoService.send(START);
-                mReceiving.setVisibility(View.VISIBLE);
-                mProgressBar.setVisibility(View.VISIBLE);
-                break;
-            case R.id.connect:
-                 v.setEnabled(false);
-                mConnectionStatusText.setText("Connecting...");
-                Intent rfduinoIntent = new Intent(getActivity(),
-                        RFduinoService.class);
-                getActivity().bindService(rfduinoIntent, rfduinoServiceConnection,
-                        Activity.BIND_AUTO_CREATE);
+                    break;
+                case R.id.scan:
+                    mBluetoothAdapter.startLeScan(
+                            new UUID[]{RFduinoService.UUID_SERVICE},
+                            ConnectionFragment.this);
+                    break;
+                case R.id.stopButton:
+                    mReceiving.setVisibility(View.INVISIBLE);
+                    mProgressBar.setVisibility(View.INVISIBLE);
+                    mRFduinoService.send(STOP);
+                    mViewFileButton.setEnabled(true);
+                case R.id.connectionStatus:
+                    break;
+                case R.id.txtconnection:
+                    switcher.setDisplayedChild(0);
+                    break;
+                case R.id.graph:
+                    switcher.setDisplayedChild(1);
+                    break;
+                case R.id.startButton:
+                    mRFduinoService.send(START);
+                    mReceiving.setVisibility(View.VISIBLE);
+                    mProgressBar.setVisibility(View.VISIBLE);
+                    break;
+                case R.id.connect:
+                    v.setEnabled(false);
+                    mConnectionStatusText.setText("Connecting...");
+                    Intent rfduinoIntent = new Intent(getActivity(),
+                            RFduinoService.class);
+                    getActivity().bindService(rfduinoIntent, rfduinoServiceConnection,
+                            Activity.BIND_AUTO_CREATE);
 
-                break;
-            case R.id.sendButton:
-                                mRFduinoService.send(mCommandText.getText().toString()
-                        .getBytes());
-                break;
-            case R.id.txtfinish:
-                replace(new FinalResultsFragment(values), false);
-                break;
-            case R.id.txtresume:
-                     if (running) {
-                    resume.setText("Resume");
-                    running = false;
-                } else {
-                    resume.setText("Pause");
-                    running=true;
-                }
-                break;
-            default:
-                break;
+                    break;
+                case R.id.sendButton:
+                    mRFduinoService.send(mCommandText.getText().toString()
+                            .getBytes());
+                    break;
+                case R.id.txtfinish:
+                    replace(new FinalResultsFragment(values), false);
+                    break;
+                case R.id.txtresume:
+                    if (running) {
+                        resume.setText("Resume");
+                        running = false;
+                    } else {
+                        resume.setText("Pause");
+                        running = true;
+                    }
+                    break;
+                default:
+                    break;
 
+            }
         }
-    }
+//    }
 }

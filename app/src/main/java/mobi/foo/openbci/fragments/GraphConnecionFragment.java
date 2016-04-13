@@ -137,7 +137,7 @@ public class GraphConnecionFragment extends BaseFragment implements LeScanCallba
             } else if (RFduinoService.ACTION_DATA_AVAILABLE.equals(action)) {
                 byte[] data = intent
                         .getByteArrayExtra(RFduinoService.EXTRA_DATA);
-                if (data[0] == 911) {
+                if (data[0] == (byte) 911) {
                     replace(new TutorialConnectFragment(), false);
                 } else {
 
@@ -341,7 +341,7 @@ public class GraphConnecionFragment extends BaseFragment implements LeScanCallba
 
         });
 
-        // Button to send "s" to the RFduino to begin data transfer
+        // Button to send "s" to the RFduino to stop data transfer
         mStopButton = (Button) view.findViewById(R.id.stopButton);
         mStopButton.setOnClickListener(new View.OnClickListener() {
 

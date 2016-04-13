@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_pressed="true" android:drawable="@drawable/blue_white" />
-    <item android:drawable="@drawable/white_blue" />
-</selector><!-- From: file:/C:/Users/wassim/androidstudio/openbci_new/app/src/main/res/drawable-hdpi/red_white.xml -->
