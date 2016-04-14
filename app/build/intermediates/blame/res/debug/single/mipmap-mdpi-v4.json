@@ -2,5 +2,9 @@
     {
         "merged": "/Users/AlfahadOSx/Downloads/drowsiness/app/build/intermediates/res/merged/debug/mipmap-mdpi-v4/ic_launcher.png",
         "source": "/Users/AlfahadOSx/Downloads/drowsiness/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/AlfahadOSx/Documents/GitHub/OpenBCI-AlphaWave-Android/app/build/intermediates/res/merged/debug/mipmap-mdpi-v4/ic_launcher.png",
+        "source": "/Users/AlfahadOSx/Documents/GitHub/OpenBCI-AlphaWave-Android/app/src/main/res/mipmap-mdpi/ic_launcher.png"
     }
 ]

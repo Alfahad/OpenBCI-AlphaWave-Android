@@ -8,7 +8,19 @@
         "source": "/Users/AlfahadOSx/Downloads/drowsiness/app/src/main/res/menu/menu_main.xml"
     },
     {
+        "merged": "/Users/AlfahadOSx/Documents/GitHub/OpenBCI-AlphaWave-Android/app/build/intermediates/res/merged/debug/menu/line.xml",
+        "source": "/Users/AlfahadOSx/Documents/GitHub/OpenBCI-AlphaWave-Android/app/src/main/res/menu/line.xml"
+    },
+    {
         "merged": "/Users/AlfahadOSx/Downloads/drowsiness/app/build/intermediates/res/merged/debug/menu/line.xml",
         "source": "/Users/AlfahadOSx/Downloads/drowsiness/app/src/main/res/menu/line.xml"
+    },
+    {
+        "merged": "/Users/AlfahadOSx/Documents/GitHub/OpenBCI-AlphaWave-Android/app/build/intermediates/res/merged/debug/menu/main.xml",
+        "source": "/Users/AlfahadOSx/Documents/GitHub/OpenBCI-AlphaWave-Android/app/src/main/res/menu/main.xml"
+    },
+    {
+        "merged": "/Users/AlfahadOSx/Documents/GitHub/OpenBCI-AlphaWave-Android/app/build/intermediates/res/merged/debug/menu/menu_main.xml",
+        "source": "/Users/AlfahadOSx/Documents/GitHub/OpenBCI-AlphaWave-Android/app/src/main/res/menu/menu_main.xml"
     }
 ]

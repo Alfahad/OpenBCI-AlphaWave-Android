@@ -1,11 +1,23 @@
 [
     {
+        "merged": "/Users/AlfahadOSx/Downloads/drowsiness/app/build/intermediates/res/merged/debug/anim/move_left_in_activity.xml",
+        "source": "/Users/AlfahadOSx/Downloads/drowsiness/app/src/main/res/anim/move_left_in_activity.xml"
+    },
+    {
+        "merged": "/Users/AlfahadOSx/Documents/GitHub/OpenBCI-AlphaWave-Android/app/build/intermediates/res/merged/debug/anim/move_left_out_activity.xml",
+        "source": "/Users/AlfahadOSx/Documents/GitHub/OpenBCI-AlphaWave-Android/app/src/main/res/anim/move_left_out_activity.xml"
+    },
+    {
+        "merged": "/Users/AlfahadOSx/Documents/GitHub/OpenBCI-AlphaWave-Android/app/build/intermediates/res/merged/debug/anim/move_right_in_activity.xml",
+        "source": "/Users/AlfahadOSx/Documents/GitHub/OpenBCI-AlphaWave-Android/app/src/main/res/anim/move_right_in_activity.xml"
+    },
+    {
         "merged": "/Users/AlfahadOSx/Downloads/drowsiness/app/build/intermediates/res/merged/debug/anim/move_left_out_activity.xml",
         "source": "/Users/AlfahadOSx/Downloads/drowsiness/app/src/main/res/anim/move_left_out_activity.xml"
     },
     {
-        "merged": "/Users/AlfahadOSx/Downloads/drowsiness/app/build/intermediates/res/merged/debug/anim/move_left_in_activity.xml",
-        "source": "/Users/AlfahadOSx/Downloads/drowsiness/app/src/main/res/anim/move_left_in_activity.xml"
+        "merged": "/Users/AlfahadOSx/Documents/GitHub/OpenBCI-AlphaWave-Android/app/build/intermediates/res/merged/debug/anim/abc_slide_out_bottom.xml",
+        "source": "/Users/AlfahadOSx/Documents/GitHub/OpenBCI-AlphaWave-Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/anim/abc_slide_out_bottom.xml"
     },
     {
         "merged": "/Users/AlfahadOSx/Downloads/drowsiness/app/build/intermediates/res/merged/debug/anim/abc_slide_out_top.xml",
@@ -16,12 +28,28 @@
         "source": "/Users/AlfahadOSx/Downloads/drowsiness/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/anim/abc_slide_in_bottom.xml"
     },
     {
-        "merged": "/Users/AlfahadOSx/Downloads/drowsiness/app/build/intermediates/res/merged/debug/anim/move_right_out_activity.xml",
-        "source": "/Users/AlfahadOSx/Downloads/drowsiness/app/src/main/res/anim/move_right_out_activity.xml"
+        "merged": "/Users/AlfahadOSx/Documents/GitHub/OpenBCI-AlphaWave-Android/app/build/intermediates/res/merged/debug/anim/abc_slide_out_top.xml",
+        "source": "/Users/AlfahadOSx/Documents/GitHub/OpenBCI-AlphaWave-Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/anim/abc_slide_out_top.xml"
+    },
+    {
+        "merged": "/Users/AlfahadOSx/Documents/GitHub/OpenBCI-AlphaWave-Android/app/build/intermediates/res/merged/debug/anim/abc_fade_out.xml",
+        "source": "/Users/AlfahadOSx/Documents/GitHub/OpenBCI-AlphaWave-Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/anim/abc_fade_out.xml"
+    },
+    {
+        "merged": "/Users/AlfahadOSx/Documents/GitHub/OpenBCI-AlphaWave-Android/app/build/intermediates/res/merged/debug/anim/abc_fade_in.xml",
+        "source": "/Users/AlfahadOSx/Documents/GitHub/OpenBCI-AlphaWave-Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/anim/abc_fade_in.xml"
     },
     {
         "merged": "/Users/AlfahadOSx/Downloads/drowsiness/app/build/intermediates/res/merged/debug/anim/abc_slide_in_top.xml",
         "source": "/Users/AlfahadOSx/Downloads/drowsiness/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/anim/abc_slide_in_top.xml"
+    },
+    {
+        "merged": "/Users/AlfahadOSx/Documents/GitHub/OpenBCI-AlphaWave-Android/app/build/intermediates/res/merged/debug/anim/abc_slide_in_bottom.xml",
+        "source": "/Users/AlfahadOSx/Documents/GitHub/OpenBCI-AlphaWave-Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/anim/abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "/Users/AlfahadOSx/Downloads/drowsiness/app/build/intermediates/res/merged/debug/anim/move_right_out_activity.xml",
+        "source": "/Users/AlfahadOSx/Downloads/drowsiness/app/src/main/res/anim/move_right_out_activity.xml"
     },
     {
         "merged": "/Users/AlfahadOSx/Downloads/drowsiness/app/build/intermediates/res/merged/debug/anim/abc_slide_out_bottom.xml",
@@ -32,8 +60,20 @@
         "source": "/Users/AlfahadOSx/Downloads/drowsiness/app/src/main/res/anim/move_right_in_activity.xml"
     },
     {
+        "merged": "/Users/AlfahadOSx/Documents/GitHub/OpenBCI-AlphaWave-Android/app/build/intermediates/res/merged/debug/anim/abc_slide_in_top.xml",
+        "source": "/Users/AlfahadOSx/Documents/GitHub/OpenBCI-AlphaWave-Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/anim/abc_slide_in_top.xml"
+    },
+    {
+        "merged": "/Users/AlfahadOSx/Documents/GitHub/OpenBCI-AlphaWave-Android/app/build/intermediates/res/merged/debug/anim/move_left_in_activity.xml",
+        "source": "/Users/AlfahadOSx/Documents/GitHub/OpenBCI-AlphaWave-Android/app/src/main/res/anim/move_left_in_activity.xml"
+    },
+    {
         "merged": "/Users/AlfahadOSx/Downloads/drowsiness/app/build/intermediates/res/merged/debug/anim/abc_fade_in.xml",
         "source": "/Users/AlfahadOSx/Downloads/drowsiness/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/anim/abc_fade_in.xml"
+    },
+    {
+        "merged": "/Users/AlfahadOSx/Documents/GitHub/OpenBCI-AlphaWave-Android/app/build/intermediates/res/merged/debug/anim/move_right_out_activity.xml",
+        "source": "/Users/AlfahadOSx/Documents/GitHub/OpenBCI-AlphaWave-Android/app/src/main/res/anim/move_right_out_activity.xml"
     },
     {
         "merged": "/Users/AlfahadOSx/Downloads/drowsiness/app/build/intermediates/res/merged/debug/anim/abc_fade_out.xml",
